@@ -1,0 +1,116 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	line-height: 1;
+}
+
+.App {
+	background-color: #d4d8ec;
+	text-align: center;
+	width: 100%;
+	height: 100vh;
+}
+
+.song-table {
+	margin-left: 20px;
+}
+
+.song-card {
+	margin-bottom: 15px;
+	height: 110px;
+	text-align: left;
+	border-radius: 30px;
+	background-color: #d4d8ec;
+	box-shadow:  10px 10px 40px #b4b8c9, 
+		-10px -10px 40px #f4f8ff;
+}
+
+.song-card-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	max-width: 550px;
+	min-width: 550px;
+}
+
+.song-card-rank {
+	min-width: 1.5em;
+	max-width: 1.5em;
+	text-align: center;
+	font-size: 2.5em;
+	font-weight: bold;
+}
+
+.song-card-details {
+	> * {
+		padding: 5px;
+	}
+}
+
+.song-card-title {
+	max-width: 400px;
+	min-width: 400px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.song-card-cover {
+	width: 110px;
+	height: 110px;
+	margin-left: auto;
+	border-radius: 0 30px 30px 0;
+}
+
+.zoom {
+	transition: transform .2s;
+
+	&:hover {
+		transform: scale(1.02);
+		cursor: pointer;
+	}
+}
+
+.spinner-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+	height: 100px;
+
+	.spinner-column {
+		margin-right: 10px;
+		background-color: #fff;
+		width: 30px;
+		height: 100px;
+		border-radius: 2px;
+	}
+
+	:nth-child(1) {
+		margin-left: 10px;
+		background-color: green;
+		animation: first-column 1.25s ease-in-out infinite 0s;
+	}
+
+	:nth-child(2) {
+		background-color: #000;
+		animation: first-column 1.25s ease-in-out infinite 0.15s;
+	}
+
+	:nth-child(3) {
+		background-color: #000;
+		animation: first-column 1.25s ease-in-out infinite 0.25s;
+	}
+}
+
+@keyframes first-column {
+	30% {height: 100px;}
+	50% {height: 25px;}
+	70% {height: 100px;}
+}
+
+.term-selector-container {
+	display: block;
+}
