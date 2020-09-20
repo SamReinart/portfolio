@@ -13,6 +13,7 @@ function SongTable(props) {
 							artist={props.artists[index]} 
 							album={props.albums[index]} 
 							cover={props.covers[index]} 
+							key={index}
 						/>
 					);
 				})
